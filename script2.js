@@ -89,8 +89,9 @@ var view = {
         // this means that each time the loop runs, this function DECLARATION is returned
 
 
+        // but this executes that function declaration immediately
+
       })(counter, name, src));
-      // but this executes that function declaration immediately
 
     });
   }

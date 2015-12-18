@@ -72,6 +72,11 @@ var view = {
     var display = document.getElementById("display");
 
     octopus.getCats().forEach(function (cat) {
+      // "cat" is actually 1 of 3 parameters that can be used
+      // element_value ("cat", which is provided; is "the 1st cat object", so cat.name == "Hank"
+      // element_index (the number from 0, of each cat object)
+      // array (the name of the array)
+      // need to figure this out properly
       var li = document.createElement('li');
 
       var counter = cat.counter;
