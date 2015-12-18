@@ -56,6 +56,8 @@ var view = {
 
   render: function () {
     var catList = document.getElementById("cat-list");
+    // could possibly move this into init
+    // and use this.catList so it's accessible from render?
     var display = document.getElementById("display");
 
     octopus.getCats().forEach(function (cat) {
@@ -85,6 +87,7 @@ var view = {
             document.getElementById("cat-image").src = "";
           });
           // this needs to be inside the closure too, else the counters change to "0", but any subsequent clicks display a counter that is the stored value
+          // but the debugger shows this being run 10+ times before it exits the reset loop??!
         };
         // this means that each time the loop runs, this function DECLARATION is returned
 
